@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - YALI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">YALI</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 18C8.10457 18 9 18.8954 9 20C9 21.1046 8.10457 22 7 22C5.89543 22 5 21.1046 5 20C5 18.8954 5.89543 18 7 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 18C18.1046 18 19 18.8954 19 20C19 21.1046 18.1046 22 17 22C15.8954 22 15 21.1046 15 20C15 18.8954 15.8954 18 17 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.20427 16 9.66 16H18.7C19.1557 16 19.6068 15.8526 19.9724 15.5583C20.3381 15.264 20.5885 14.8504 20.68 14.39L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-detail">
+            <div class="container">
+                <button class="back-btn" onclick="window.history.back()">← Back to Products</button>
+                <div class="product-detail-content">
+                    <div class="product-images">
+                        <div class="main-image">
+                            <img id="mainProductImage" src="" alt="Product Image">
+                        </div>
+                        <div class="thumbnail-images" id="thumbnailImages">
+                            <!-- Thumbnails will be loaded dynamically -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h1 id="productTitle">Product Name</h1>
+                        <div class="price" id="productPrice">$0.00</div>
+                        <div class="description">
+                            <p>Exquisite vintage jewelry piece crafted with attention to detail and timeless design.</p>
+                            <p>Each piece is carefully curated to ensure authenticity and quality.</p>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
+                            <div class="quantity-control">
+                                <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                                <input type="number" id="quantity" value="1" min="1">
+                                <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 YALI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>

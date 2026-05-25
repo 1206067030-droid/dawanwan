@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Cart</title>
+</head>
+<body>
+    <h1>Test Shopping Cart</h1>
+    <button onclick="testAddToCart()">Add Product to Cart</button>
+    <button onclick="viewCart()">View Cart</button>
+    
+    <script src="script.js"></script>
+    <script>
+        // Test adding product to cart
+        function testAddToCart() {
+            addToCart(1, 1); // Add first product with quantity 1
+            alert('Product added to cart! Check localStorage.');
+        }
+        
+        // View cart contents
+        function viewCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            console.log('Cart contents:', cart);
+            alert('Cart contents: ' + JSON.stringify(cart, null, 2));
+        }
+    </script>
+</body>
+</html>

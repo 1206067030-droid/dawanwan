@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - YALI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">YALI</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 18C8.10457 18 9 18.8954 9 20C9 21.1046 8.10457 22 7 22C5.89543 22 5 21.1046 5 20C5 18.8954 5.89543 18 7 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 18C18.1046 18 19 18.8954 19 20C19 21.1046 18.1046 22 17 22C15.8954 22 15 21.1046 15 20C15 18.8954 15.8954 18 17 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.20427 16 9.66 16H18.7C19.1557 16 19.6068 15.8526 19.9724 15.5583C20.3381 15.264 20.5885 14.8504 20.68 14.39L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart">
+            <div class="container">
+                <h2>Your Shopping Cart</h2>
+                <div class="cart-content">
+                    <div class="cart-items" id="cartItems">
+                        <!-- Cart items will be loaded dynamically -->
+                        <div class="empty-cart">
+                            <p>Your cart is empty</p>
+                            <a href="index.html#products" class="btn">Continue Shopping</a>
+                        </div>
+                    </div>
+                    <div class="cart-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-item">
+                            <span>Subtotal</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Shipping</span>
+                            <span id="shipping">$0.00</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                        <h3>Payment Methods</h3>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <input type="radio" id="credit-card" name="payment" value="credit-card" checked>
+                                <label for="credit-card">Credit Card</label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="paypal" name="payment" value="paypal">
+                                <label for="paypal">PayPal</label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="apple-pay" name="payment" value="apple-pay">
+                                <label for="apple-pay">Apple Pay</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" id="checkoutBtn" disabled>Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 YALI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
